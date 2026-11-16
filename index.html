@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scruff Relief — Malassezia-safe beard oil</title>
+<meta name="description" content="Scruff Relief is a Malassezia-safe beard oil built on ultra-refined squalane, made for flake-prone, sensitive skin.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Scruff Relief — Malassezia-safe beard oil">
+<meta property="og:description" content="Beard oil built on ultra-refined squalane, an oil skin yeast can't eat.">
+<meta property="og:image" content="https://scruffrelief.com/images/trio.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--ink:#111111;--muted:#444444;--soft:#F5F2EE;--line:#E6E6E6;--gold:#D9A86C;--gold-dark:#8A5A24;--grey:#C9C9C9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--gold-dark)}
+img,svg{display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.eyebrow{font-family:Jost,sans-serif;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark)}
+.dark .eyebrow{color:var(--gold)}
+h1,h2,h3{font-family:Jost,sans-serif;text-transform:uppercase;margin:0}
+h2{font-weight:600;font-size:clamp(28px,6vw,48px);line-height:1.06;letter-spacing:.01em}
+h3{font-weight:600;font-size:17px;letter-spacing:.08em}
+p{margin:0}
+.section{padding:72px 0}
+.dark{background:var(--ink);color:#fff}
+.soft{background:var(--soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;font-family:Jost,sans-serif;font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid #fff}
+.btn-dark{background:var(--ink);color:#fff;width:100%}
+.photo{position:relative;overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slot{position:relative;background:#2A2420;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:20px;color:var(--gold);font-family:Jost,sans-serif}
+.slot svg{position:absolute;top:20px;left:20px;opacity:.6}
+.slot b{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.slot span{font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5;color:#C9BBA8}
+.gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:12px}
+.gallery .slot{min-height:460px}
+@media (max-width:820px){.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;-webkit-overflow-scrolling:touch;margin:0 -20px;padding:0 20px;scrollbar-width:none}.gallery::-webkit-scrollbar{display:none}.gallery .slot{flex:0 0 78%;min-height:380px;scroll-snap-align:start}}
+.placeholder{display:flex;align-items:flex-end;padding:20px;font-family:Jost,sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+
+/* bar + nav */
+.bar{background:var(--ink);color:#fff;text-align:center;font-family:Jost,sans-serif;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px}
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:Jost,sans-serif;font-weight:700;font-size:18px;letter-spacing:.2em}
+.links{display:flex;gap:22px;font-family:Jost,sans-serif;font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.links a{color:var(--ink);text-decoration:none;white-space:nowrap}
+.icon-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;color:var(--ink)}
+.mobile-links{display:none;overflow-x:auto;gap:22px;padding:0 20px 12px;font-family:Jost,sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.mobile-links::-webkit-scrollbar{display:none}
+.mobile-links a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:6px 0}
+@media (max-width:820px){.links{display:none}.mobile-links{display:flex}.logo{font-size:15px;letter-spacing:.18em}}
+
+/* hero */
+.hero{display:flex;flex-wrap:wrap}
+.hero-copy{flex:1 1 440px;padding:72px 40px 72px 0;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.hero h1{font-weight:600;font-size:clamp(40px,9vw,72px);line-height:1.02}
+.hero p{font-size:18px;line-height:1.65;color:var(--grey);max-width:500px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-img{flex:1 1 440px;min-height:560px;background:#2A2420}
+@media (max-width:820px){.hero .wrap{padding:0}.hero-copy{padding:48px 20px}.hero-img{min-height:340px}.hero-ctas .btn{flex:1 1 180px}}
+
+/* benefits */
+.benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding-top:24px;padding-bottom:24px}
+.benefit{display:flex;align-items:center;gap:12px;font-family:Jost,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.tick{width:38px;height:38px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+@media (max-width:820px){.benefits{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* product */
+.product{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.product-img{flex:1 1 420px;height:520px;background:var(--soft);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:56px;position:relative}
+.product-img .tag{position:absolute;top:20px;left:20px;color:var(--gold-dark)}
+.product-copy{flex:1 1 420px;display:flex;flex-direction:column;gap:18px}
+.price{font-size:22px;font-weight:500}
+.lead{font-size:17px;line-height:1.7;color:var(--muted)}
+.plans{display:flex;flex-wrap:wrap;gap:10px;border:0;margin:0;padding:0}
+.plan{flex:1 1 200px;position:relative}
+.plan input{position:absolute;opacity:0;pointer-events:none}
+.plan label{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:72px;border:1.5px solid #D0D0D0;cursor:pointer}
+.plan input:checked + label{border:2px solid var(--ink)}
+.plan input:focus-visible + label{outline:3px solid var(--gold);outline-offset:2px}
+.plan strong{font-family:Jost,sans-serif;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.plan span{font-size:14px;color:var(--muted)}
+.fine{font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+@media (max-width:820px){.product-img{height:400px;flex-basis:100%}}
+
+/* bottle illustration */
+.dropper-bulb{width:26px;height:64px;background:#1b1b1b;border-radius:13px 13px 4px 4px}
+.dropper-cap{width:76px;height:44px;background:#1b1b1b;border-radius:4px 4px 2px 2px}
+.bottle{width:166px;height:250px;background:#232323;border-radius:24px;display:flex;align-items:center;justify-content:center}
+.bottle-label{width:128px;height:150px;background:#141414;border:1px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;color:var(--gold);font-family:Jost,sans-serif}
+
+/* cards */
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){.grid-3{grid-template-columns:1fr}}
+@media (max-width:560px){.grid-4{grid-template-columns:1fr}}
+.card{background:#fff;padding:28px 24px;display:flex;flex-direction:column;gap:10px}
+.card p{font-size:16px;line-height:1.6;color:var(--muted)}
+.two-col{display:flex;flex-wrap:wrap;gap:24px 48px;align-items:flex-start;margin-bottom:40px}
+.two-col > *{flex:1 1 380px}
+.body-lg{font-size:18px;line-height:1.7;color:#333}
+.dark .body-lg{color:var(--grey)}
+
+/* chain scale */
+.scale-box{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:40px}
+.scale{min-width:620px;display:flex;flex-direction:column;gap:12px}
+.scale-bar{display:flex;height:60px;font-family:Jost,sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.scale-bar div{display:flex;align-items:center;justify-content:center;text-align:center;padding:0 6px}
+.safe{background:var(--gold);color:var(--ink)}
+.feeds{background:#3A3330;color:#fff;border-left:2px solid var(--ink);border-right:2px solid var(--ink)}
+.ticks{display:flex;justify-content:space-between;font-size:12px;color:#A8A8A8;font-family:Jost,sans-serif;letter-spacing:.08em}
+.scale-notes{display:flex;font-size:14px;line-height:1.5}
+.scale-notes strong{color:var(--gold)}
+.swipe{display:none;font-size:12px;color:#A8A8A8;margin-top:10px}
+@media (max-width:660px){.swipe{display:block}}
+
+/* oils table */
+.oils{border-top:2px solid var(--ink)}
+.oil-row{display:grid;grid-template-columns:1.3fr 1.4fr .6fr;gap:8px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.oil-row.head{font-family:Jost,sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#666}
+.oil-row .chain{text-align:right;font-family:Jost,sans-serif;font-weight:600;color:var(--gold-dark)}
+.oil-row span:nth-child(2){color:var(--muted)}
+
+/* ingredients */
+.num{font-family:Jost,sans-serif;font-weight:700;font-size:40px;color:var(--gold);line-height:1}
+
+/* steps */
+.step{border-top:2px solid var(--ink);padding-top:20px;display:flex;flex-direction:column;gap:8px}
+.step .eyebrow{letter-spacing:.2em}
+.step p{font-size:16px;line-height:1.65;color:var(--muted)}
+
+/* founder */
+.founder{display:flex;flex-wrap:wrap}
+.founder-img{flex:1 1 400px;min-height:460px;background:#2A2420}
+.founder-copy{flex:1 1 460px;max-width:820px;padding:72px 0;display:flex;flex-direction:column;justify-content:center;gap:20px}
+@media (max-width:820px){.founder .wrap{padding:0}.founder-img{min-height:320px}.founder-copy{padding:48px 20px}}
+
+/* reviews */
+.review{margin:0;border:1.5px dashed #BDBDBD;padding:28px;display:flex;flex-direction:column;gap:12px}
+.review blockquote{margin:0;font-size:17px;line-height:1.6}
+.review figcaption{font-family:Jost,sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* faq */
+.faq{max-width:880px;margin:0 auto}
+.faq-list{border-top:2px solid var(--ink);margin-top:28px}
+details{border-bottom:1px solid #D8D2CA}
+summary{list-style:none;cursor:pointer;padding:20px 0;min-height:44px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:17px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;color:var(--gold-dark);font-weight:400}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 22px;font-size:16px;line-height:1.7;color:var(--muted);max-width:760px}
+
+/* research */
+.research ol{margin:20px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.6;color:var(--muted)}
+
+/* email */
+.signup{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between}
+.signup > div{flex:1 1 380px;display:flex;flex-direction:column;gap:10px}
+.signup form{flex:1 1 380px;display:flex;flex-wrap:wrap}
+.signup input{flex:1 1 220px;min-height:54px;padding:0 18px;border:1.5px solid #fff;background:transparent;color:#fff;font-size:16px;font-family:inherit;border-radius:0}
+.signup input::placeholder{color:#BDBDBD}
+.signup button{flex:0 0 auto}
+.signup .msg{flex-basis:100%;margin-top:10px;font-size:14px;color:var(--gold);min-height:20px}
+@media (max-width:520px){.signup button{flex:1 1 100%}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+footer{padding-top:44px;padding-bottom:56px;display:flex;flex-direction:column;gap:20px;font-size:14px;color:var(--muted)}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+.foot-links{display:flex;flex-wrap:wrap;gap:20px;font-family:Jost,sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:12px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="drop"><path d="M50 4C50 4 12 52 12 84a38 38 0 0 0 76 0C88 52 50 4 50 4Z"/></clipPath>
+    <symbol id="mark" viewBox="0 0 100 128">
+      <g clip-path="url(#drop)" fill="currentColor">
+        <rect x="0" y="0" width="100" height="78"/><rect x="0" y="84" width="100" height="8"/>
+        <rect x="0" y="98" width="100" height="8"/><rect x="0" y="112" width="100" height="16"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="bar">Malassezia-safe beard oil · Coming soon to Amazon</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Scruff Relief home">
+      <svg width="20" height="26" aria-hidden="true"><use href="#mark"/></svg>SCRUFF RELIEF
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#shop">Shop</a><a href="#learn">Malassezia-safe</a><a href="#avoid">Oils to avoid</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="icon-btn" href="#shop" aria-label="Cart"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></a>
+  </div>
+  <nav class="mobile-links" aria-label="Sections">
+    <a href="#shop">Shop</a><a href="#learn">Malassezia-safe</a><a href="#science">Science</a><a href="#avoid">Oils to avoid</a><a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="top" class="dark">
+  <div class="wrap hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Malassezia-safe beard oil</div>
+      <h1>Soft beard.<br>No flakes.<br>No itch.</h1>
+      <p>Most beard oils are made from oils that feed the yeast living on your skin. Scruff Relief is built on squalane, an oil it can't eat.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-light" href="#shop">Coming soon</a>
+        <a class="btn btn-outline" href="#learn">How it works</a>
+      </div>
+    </div>
+    <div class="hero-img photo"><img src="images/trio.jpg" alt="Three Scruff Relief bottles in frosted black glass with gold labels on a stone plinth" style="object-position:50% 60%"></div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<div style="border-bottom:1px solid var(--line)">
+  <div class="wrap benefits">
+    <div class="benefit"><span class="tick"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A5A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Malassezia-safe</div>
+    <div class="benefit"><span class="tick"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A5A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Squalane base</div>
+    <div class="benefit"><span class="tick"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A5A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>No scents or dyes</div>
+    <div class="benefit"><span class="tick"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A5A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Made for daily use</div>
+  </div>
+</div>
+
+<!-- PRODUCT -->
+<section id="shop" class="section">
+  <div class="wrap product">
+    <div class="product-img photo"><img src="images/bottle.jpg" alt="Scruff Relief beard oil, 1 fl oz frosted black dropper bottle with gold-on-black label"></div>
+    <div class="product-copy">
+      <div class="eyebrow">The original</div>
+      <h2>Scruff Relief Beard Oil</h2>
+      <div class="price">$28.99</div>
+      <p class="lead">A base of ultra-refined, micropore-filtered squalane, finished with our own proprietary formulation. Nothing in it falls inside the fatty-acid range skin yeast feeds on, so your beard gets softness and shine without fuel for flaking and itch.</p>
+      <a class="btn btn-dark" href="#notify" style="min-height:58px">Coming soon to Amazon: get notified</a>
+      <div class="fine"><div>1 fl oz (30 mL) frosted black glass dropper bottle</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS MALASSEZIA-SAFE -->
+<section id="learn" class="section soft">
+  <div class="wrap">
+    <div class="two-col">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="eyebrow">The short version</div>
+        <h2>What does Malassezia-safe mean?</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px" class="body-lg">
+        <p>Malassezia is a yeast that lives on everyone's skin. In normal numbers it causes no trouble. When it overgrows, skin reacts with flaking, itch and redness.</p>
+        <p>A Malassezia-safe product contains nothing that feeds that yeast. Under a beard, where oil gets trapped against warm skin all day, that difference shows up fast.</p>
+      </div>
+    </div>
+    <div class="grid-4">
+      <div class="card"><h3>Seborrheic dermatitis</h3><p>Itchy, flaky, inflamed skin, thought to be the immune system reacting to too much Malassezia. Common on the scalp, face and under beards.</p></div>
+      <div class="card"><h3>Dandruff</h3><p>The milder version: flaking and itch without much inflammation. In a beard it shows up as white flakes on dark clothes.</p></div>
+      <div class="card"><h3>Fungal acne</h3><p>Small, red, itchy bumps from yeast in the hair follicles. Regular acne products do nothing for it.</p></div>
+      <div class="card"><h3>Tinea versicolor</h3><p>Discolored patches with mild itch and scaling, caused by the same yeast.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCIENCE -->
+<section id="science" class="section dark">
+  <div class="wrap">
+    <div style="max-width:820px;display:flex;flex-direction:column;gap:14px">
+      <div class="eyebrow">The science</div>
+      <h2>It comes down to chain length.</h2>
+      <p class="body-lg">Malassezia can't make its own fat, so it eats yours: the sebum your skin produces, plus any oil you put on it. Research shows it prefers fatty acids with carbon chains between 11 and 24 atoms long. Nearly every plant oil and butter used in beard care lands inside that range. Scruff Relief is built on squalane, a 30-carbon oil well outside it, and nothing else in our formula falls inside it.</p>
+    </div>
+    <div class="scale-box">
+      <div class="scale">
+        <div class="scale-bar">
+          <div class="safe" style="width:13.6%">Safe</div>
+          <div class="feeds" style="width:59.1%">C11–C24 · Feeds Malassezia</div>
+          <div class="safe" style="width:27.3%">Safe</div>
+        </div>
+        <div class="ticks"><span>C8</span><span>C11</span><span>C16</span><span>C18</span><span>C20</span><span>C24</span><span>C30</span></div>
+        <div class="scale-notes">
+          <div style="width:13.6%;padding-right:8px"><strong>Short-chain</strong><br>C8–C10</div>
+          <div style="width:59.1%;padding:0 12px;color:var(--grey)">Coconut (C12) · Avocado, beeswax (C16) · Olive, argan, castor, sunflower, shea (C18) · Jojoba (C20)</div>
+          <div style="width:27.3%;padding-left:8px;text-align:right"><strong>Squalane</strong><br>C30 · our base</div>
+        </div>
+      </div>
+    </div>
+    <div class="swipe">Swipe the chart to see the full scale →</div>
+  </div>
+</section>
+
+<!-- OILS TO AVOID -->
+<section id="avoid" class="section">
+  <div class="wrap two-col" style="margin-bottom:0">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="eyebrow">Check your labels</div>
+      <h2>12 ingredients we keep out</h2>
+      <p class="lead">These are the backbone of most beard oils and balms. Each one is built mainly on fatty acids Malassezia feeds on. Several also turn up in dandruff shampoos, so check what you wash with too.</p>
+    </div>
+    <div class="oils" role="table" aria-label="Ingredients to avoid">
+      <div class="oil-row head" role="row"><span role="columnheader">Ingredient</span><span role="columnheader">Main fatty acid</span><span role="columnheader" class="chain" style="color:#666">Chain</span></div>
+      <div class="oil-row" role="row"><span role="cell">Coconut oil</span><span role="cell">Lauric</span><span role="cell" class="chain">C12</span></div>
+      <div class="oil-row" role="row"><span role="cell">Murumuru butter</span><span role="cell">Lauric</span><span role="cell" class="chain">C12</span></div>
+      <div class="oil-row" role="row"><span role="cell">Avocado oil</span><span role="cell">Palmitic</span><span role="cell" class="chain">C16</span></div>
+      <div class="oil-row" role="row"><span role="cell">Beeswax</span><span role="cell">Palmitic, oleic</span><span role="cell" class="chain">C16–18</span></div>
+      <div class="oil-row" role="row"><span role="cell">Olive oil</span><span role="cell">Oleic</span><span role="cell" class="chain">C18</span></div>
+      <div class="oil-row" role="row"><span role="cell">Argan oil</span><span role="cell">Oleic</span><span role="cell" class="chain">C18</span></div>
+      <div class="oil-row" role="row"><span role="cell">Sunflower oil</span><span role="cell">Oleic, linoleic</span><span role="cell" class="chain">C18</span></div>
+      <div class="oil-row" role="row"><span role="cell">Castor oil</span><span role="cell">Ricinoleic</span><span role="cell" class="chain">C18</span></div>
+      <div class="oil-row" role="row"><span role="cell">Shea butter</span><span role="cell">Stearic, oleic</span><span role="cell" class="chain">C18</span></div>
+      <div class="oil-row" role="row"><span role="cell">Cocoa butter</span><span role="cell">Stearic, oleic</span><span role="cell" class="chain">C18</span></div>
+      <div class="oil-row" role="row"><span role="cell">Mango seed butter</span><span role="cell">Stearic, oleic</span><span role="cell" class="chain">C18</span></div>
+      <div class="oil-row" role="row"><span role="cell">Jojoba oil</span><span role="cell">Eicosenoic</span><span role="cell" class="chain">C20</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENTS -->
+<section class="section soft">
+  <div class="wrap">
+    <div style="max-width:760px;display:flex;flex-direction:column;gap:14px;margin-bottom:36px">
+      <div class="eyebrow">What's in the bottle</div>
+      <h2>Built on squalane. Perfected in-house.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card"><div class="num">01</div><h3>A squalane base</h3><p>Ultra-refined squalane: a fully saturated oil with a 30-carbon backbone, far outside the C11–C24 range yeast can use. Light, odorless, non-comedogenic and gentle on sensitive skin.</p></div>
+      <div class="card"><div class="num">02</div><h3>Micropore filtered</h3><p>Run through micropore filtration to remove impurities, leaving a clear, clean oil.</p></div>
+      <div class="card"><div class="num">03</div><h3>Our proprietary formula</h3><p>Developed by our founder through his own testing. Every component is screened to stay outside the C11–C24 range. The exact formula stays in-house.</p></div>
+    </div>
+    <p style="margin-top:24px;font-size:15px;color:var(--muted)">No artificial scents. No coloring. No dyes. No fillers.</p>
+  </div>
+</section>
+
+<!-- HOW TO SWITCH -->
+<section class="section">
+  <div class="wrap">
+    <h2 style="margin-bottom:36px">Making the switch</h2>
+    <div class="grid-4">
+      <div class="step"><div class="eyebrow">Step 01</div><h3>Read the label</h3><p>Look for any oil or butter from the list above. If it is in the first few ingredients, it is the base of the product.</p></div>
+      <div class="step"><div class="eyebrow">Step 02</div><h3>Check everything</h3><p>Beard balm, face wash, shampoo, even dandruff shampoo. Many contain the same oils.</p></div>
+      <div class="step"><div class="eyebrow">Step 03</div><h3>Patch test</h3><p>Try any new product on a small area for a day or two first, including ours.</p></div>
+      <div class="step"><div class="eyebrow">Step 04</div><h3>Give it time</h3><p>Use Scruff Relief daily, 3–5 drops worked down to the skin, and give your skin a few weeks to settle.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="dark">
+  <div class="wrap founder">
+    <div class="founder-copy">
+      <div class="eyebrow">Why Scruff Relief exists</div>
+      <h2>I made it because I needed it.</h2>
+      <p class="body-lg">Every beard oil I tried left my skin itchy and flaking within a couple of weeks. I started reading labels and research, and found that almost all of them were built on the exact oils that feed skin yeast. So I built my own formula without them. It worked for me, and now it's in a bottle.</p>
+      <div style="font-family:Jost,sans-serif;font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase">David Gable · Founder</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section soft">
+  <div class="wrap faq">
+    <h2>Questions</h2>
+    <div class="faq-list">
+      <details open><summary>Will this cure my seborrheic dermatitis?</summary><p>No. Scruff Relief is a cosmetic beard oil, not a treatment. It is formulated without the oils that feed Malassezia, so it is designed not to make things worse. If you have a diagnosed condition, keep working with your dermatologist.</p></details>
+      <details><summary>Why not argan or jojoba? Every other brand uses them.</summary><p>That is exactly the problem. Argan is mostly oleic acid (C18) and jojoba is mostly eicosenoic acid (C20). Both sit inside the range Malassezia feeds on.</p></details>
+      <details><summary>What's in it besides squalane?</summary><p>Squalane is the base. The rest is our own formulation, developed by our founder and screened so nothing in it feeds Malassezia. The full ingredient list is printed on every bottle.</p></details>
+      <details><summary>Is it greasy?</summary><p>No. The squalane base is light and absorbs fast, with no film left on your skin or pillow.</p></details>
+      <details><summary>What does it smell like?</summary><p>Nothing. There is no added scent.</p></details>
+      <details><summary>Where can I buy it?</summary><p>Scruff Relief is launching on Amazon soon. Email <a href="mailto:support@scruffrelief.com">support@scruffrelief.com</a> and we'll tell you the day it's live.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="section research" style="padding-top:56px;padding-bottom:56px">
+  <div class="wrap">
+    <h3 style="font-size:18px;letter-spacing:.14em">The research behind it</h3>
+    <ol>
+      <li>Malassezia and its link to seborrheic dermatitis, dandruff, fungal acne and tinea versicolor. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7098993/">PMC7098993</a></li>
+      <li>Malassezia's dependence on skin lipids (sebum) for growth. <a href="https://doi.org/10.3389/fcimb.2020.00338">Frontiers in Cellular and Infection Microbiology, 2020</a></li>
+      <li>Malassezia's need for outside fatty acids to grow. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC118058/">PMC118058</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- NOTIFY -->
+<section id="notify" class="dark section" style="padding-top:56px;padding-bottom:56px">
+  <div class="wrap signup">
+    <div>
+      <h2 style="font-size:clamp(24px,5vw,30px);letter-spacing:.06em">Be first in line</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--grey)">Scruff Relief is launching on Amazon soon. Email us and we'll let you know the day it's live.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <a class="btn btn-light" href="mailto:support@scruffrelief.com?subject=Notify%20me%20when%20Scruff%20Relief%20launches">Email us to get notified</a>
+      <span style="font-size:14px;color:var(--grey)">support@scruffrelief.com</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="foot-top">
+    <a class="logo" href="#top"><svg width="18" height="23" aria-hidden="true"><use href="#mark"/></svg>SCRUFF RELIEF</a>
+    <div class="foot-links"><a href="#shop">Shop</a><a href="#learn">Learn</a><a href="#faq">FAQ</a><a href="mailto:support@scruffrelief.com">Contact</a></div>
+  </div>
+  <p style="line-height:1.6;max-width:860px">Scruff Relief is a cosmetic product. It is not intended to diagnose, treat, cure or prevent any disease. If you have a diagnosed skin condition, talk to your dermatologist before use. Patch test any new product. Questions, or a reaction to report? Email <a href="mailto:support@scruffrelief.com">support@scruffrelief.com</a>.</p>
+  <div>© 2026 Scruff Relief · scruffrelief.com</div>
+</footer>
+</body>
+</html>
